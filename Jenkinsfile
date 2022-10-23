@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: '**/dist/*.jar'
+                archiveArtifacts artifacts: '/var/lib/jenkins/workspace/train-schedule_master/'
             }
         }
         stage('DeployToStaging') {
